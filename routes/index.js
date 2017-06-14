@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/add', function(req, res, next) {
-    console.log(req.query)
     db.add(req.query)
     res.send('123')
 });
