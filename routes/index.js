@@ -8,8 +8,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/add', function(req, res, next) {
-    db.add(req.query)
-    res.send('123')
+    res.header("Access-Control-Allow-Origin", "*");
+
+    res.send( db.add(req.query))
 });
 
 module.exports = router;
